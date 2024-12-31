@@ -713,7 +713,7 @@ class Companion:
                         else:
                             raise FileNotFoundError
                 except FileNotFoundError:
-                    pin = self.generator.getLikely(bssid) or '12345670'
+                    pin = '12345670'
             elif not pbc_mode:
                 # If not pixiemode, ask user to select a pin from the list
                 pin = self.__prompt_wpspin(bssid) or '12345670'
