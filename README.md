@@ -58,6 +58,10 @@ Optional: getting a list of vulnerable to pixie dust devices for highlighting in
  ```
  wget https://raw.githubusercontent.com/FluffyFox337/oneshot/refs/heads/master/vulnwsc.txt
  ```
+Optional: getting a list of WPS pins:
+ ```
+ wget https://raw.githubusercontent.com/FluffyFox337/oneshot/refs/heads/master/pins.csv
+ ```
 ## Alpine Linux
 It can also be used to run on Android devices using [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy)
 
@@ -77,6 +81,10 @@ Optional: getting a list of vulnerable to pixie dust devices for highlighting in
  ```
  sudo wget https://raw.githubusercontent.com/fulvius31/OneShot/master/vulnwsc.txt
  ```
+Optional: getting a list of WPS pins:
+ ```
+ wget https://raw.githubusercontent.com/FluffyFox337/oneshot/refs/heads/master/pins.csv
+ ```
 ## [Termux](https://termux.com/)
 Please note that root access is required.  
 
@@ -92,7 +100,7 @@ Please note that root access is required.
  ```
 **Getting OneShot**
  ```
- git clone --depth 1 https://github.com/fulvius31/OneShot OneShot
+ git clone --depth 1 https://raw.githubusercontent.com/FluffyFox337/oneshot OneShot
  ```
 #### Running
  ```
