@@ -41,6 +41,10 @@ Optional: getting a list of vulnerable to pixie dust devices for highlighting in
  ```
  wget https://raw.githubusercontent.com/fulvius31/OneShot/master/vulnwsc.txt
  ```
+Optional: getting a list of WPS pins:
+ ```
+ wget https://raw.githubusercontent.com/FluffyFox337/oneshot/refs/heads/master/pins.csv
+ ```
 ## Arch Linux
 **Installing requirements**
  ```
