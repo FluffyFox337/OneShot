@@ -95,6 +95,7 @@ Please note that root access is required.
 #### Manually
 **Installing requirements**
  ```
+ pkg update && pkg upgrade -y
  pkg install -y root-repo
  pkg install -y git tsu python wpa-supplicant pixiewps iw openssl
  ```
