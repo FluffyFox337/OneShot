@@ -35,11 +35,11 @@
 **Getting OneShot**
  ```
  cd ~
- wget https://raw.githubusercontent.com/fulvius31/OneShot/master/oneshot.py
+ wget https://raw.githubusercontent.com/FluffyFox337/oneshot/refs/heads/master/oneshot.py
  ```
 Optional: getting a list of vulnerable to pixie dust devices for highlighting in scan results:
  ```
- wget https://raw.githubusercontent.com/fulvius31/OneShot/master/vulnwsc.txt
+ wget https://raw.githubusercontent.com/FluffyFox337/oneshot/refs/heads/master/vulnwsc.txt
  ```
 Optional: getting a list of WPS pins:
  ```
@@ -52,11 +52,11 @@ Optional: getting a list of WPS pins:
  ```
 **Getting OneShot**
  ```
- wget https://raw.githubusercontent.com/fulvius31/OneShot/master/oneshot.py
+ wget https://raw.githubusercontent.com/FluffyFox337/oneshot/refs/heads/master/oneshot.py
  ```
 Optional: getting a list of vulnerable to pixie dust devices for highlighting in scan results:
  ```
- wget https://raw.githubusercontent.com/fulvius31/OneShot/master/vulnwsc.txt
+ wget https://raw.githubusercontent.com/FluffyFox337/oneshot/refs/heads/master/vulnwsc.txt
  ```
 ## Alpine Linux
 It can also be used to run on Android devices using [Linux Deploy](https://play.google.com/store/apps/details?id=ru.meefik.linuxdeploy)
@@ -82,7 +82,7 @@ Please note that root access is required.
 
 #### Using installer
  ```
- curl -sSf https://raw.githubusercontent.com/fulvius31/OneShot_Termux_installer/master/installer.sh | bash
+ curl -sSf https://raw.githubusercontent.com/FluffyFox337/oneshot_installer-termux/refs/heads/master/installer.sh | bash
  ```
 #### Manually
 **Installing requirements**
