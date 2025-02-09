@@ -745,9 +745,9 @@ class Companion:
             return True
         elif pixiemode:
             if self.pixie_creds.got_all():
-                pin = self.__runPixiewps(showpixiecmd, pixieforce)
+                pixiedust_pin = self.__runPixiewps(showpixiecmd, pixieforce)
                 if pin:
-                    return self.single_connection(bssid, pin, pixiemode=False, store_pin_on_fail=True)
+                    return self.__wps_connection(bssid, pixiedust_pin, pixiemode=False)
                 return False
             else:
                 print('[!] Not enough data to run Pixie Dust attack')
