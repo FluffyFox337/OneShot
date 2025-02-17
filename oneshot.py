@@ -538,11 +538,13 @@ class Companion:
         elif ('WPS-FAIL' in line) and (self.connection_status.status != ''):
             if 'msg=5 config_error=15' in line:
                 print('[*] Received WPS-FAIL with reason: WPS LOCKED')
-                self.connection_status.status = 'WPS_FAIL'
+                if not pixiemode:
+                    self.connection_status.status = 'WPS_FAIL'
             elif 'msg=8' in line:
                 if 'config_error=15' in line:
                     print('[*] Received WPS-FAIL with reason: WPS LOCKED')
-                    self.connection_status.status = 'WPS_FAIL'
+                    if not pixiemode:
+                        self.connection_status.status = 'WPS_FAIL'
                 else:
                     self.connection_status.status = 'WSC_NACK'
                     print('[-] Error: PIN was wrong')
