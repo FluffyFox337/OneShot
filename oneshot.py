@@ -538,11 +538,13 @@ class Companion:
         elif ('WPS-FAIL' in line) and (self.connection_status.status != ''):
             if 'msg=5 config_error=15' in line:
                 print('[*] Received WPS-FAIL with reason: WPS LOCKED')
-                self.connection_status.status = 'WPS_FAIL'
+                if not pixiemode:
+                    self.connection_status.status = 'WPS_FAIL'
             elif 'msg=8' in line:
                 if 'config_error=15' in line:
                     print('[*] Received WPS-FAIL with reason: WPS LOCKED')
-                    self.connection_status.status = 'WPS_FAIL'
+                    if not pixiemode:
+                        self.connection_status.status = 'WPS_FAIL'
                 else:
                     self.connection_status.status = 'WSC_NACK'
                     print('[-] Error: PIN was wrong')
@@ -745,9 +747,9 @@ class Companion:
             return True
         elif pixiemode:
             if self.pixie_creds.got_all():
-                pin = self.__runPixiewps(showpixiecmd, pixieforce)
+                pixiedust_pin = self.__runPixiewps(showpixiecmd, pixieforce)
                 if pin:
-                    return self.single_connection(bssid, pin, pixiemode=False, store_pin_on_fail=True)
+                    return self.__wps_connection(bssid, pixiedust_pin, pixiemode=False)
                 return False
             else:
                 print('[!] Not enough data to run Pixie Dust attack')
@@ -1035,7 +1037,7 @@ class WiFiScanner:
                 network['Security type'], network['Level'],
                 deviceName, model
                 )
-            if (network['BSSID'], network['ESSID']) in self.stored:
+            if (network['BSSID'],  network.get('ESSID', '')) in self.stored:
                 print(colored(line, color='yellow'))
             elif network['WPS locked']:
                 print(colored(line, color='red'))
